@@ -66,21 +66,21 @@ storeFile=D:/KeyStore/key.jks(Path Where key.js is stored)<br>
 
 
 
-signingConfigs {
-       release {
-           keyAlias keystoreProperties['keyAlias']
-           keyPassword keystoreProperties['keyPassword']
-           storeFile keystoreProperties['storeFile'] ? file(keystoreProperties['storeFile']) : null
-           storePassword keystoreProperties['storePassword']
-       }
-   }
-    buildTypes {
-        release {
-            // TODO: Add your own signing config for the release build.
-            // Signing with the debug keys for now, so `flutter run --release` works.
-           signingConfig signingConfigs.release
-        }
-    }
+signingConfigs {<br>
+       release {<br>
+           keyAlias keystoreProperties['keyAlias']<br>
+           keyPassword keystoreProperties['keyPassword']<br>
+           storeFile keystoreProperties['storeFile'] ? file(keystoreProperties['storeFile']) : null<br>
+           storePassword keystoreProperties['storePassword']<br>
+       }<br>
+   }<br>
+    buildTypes {<br>
+        release {<br>
+            // TODO: Add your own signing config for the release build.<br>
+            // Signing with the debug keys for now, so `flutter run --release` works.<br>
+           signingConfig signingConfigs.release<br>
+        }<br>
+    }<br>
 
 
 
@@ -88,7 +88,7 @@ signingConfigs {
 
   Goto path /andriod/app/src/main open AndroidMainfest.xml file and <br>if your app is going to use the internet add internet permission for that in mainfest file.
 <br>
-    <uses-permission android:name="android.permission.INTERNET" />
+  -  <uses-permission android:name="android.permission.INTERNET" />
 
 
 
