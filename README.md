@@ -25,12 +25,12 @@ keytool -genkey -v -keystore D:\KeyStore\key.jks -keyalg RSA -keysize 2048 -vali
 
 -  Create file key.properties in the andriod folder(this file exists with setting.gradle,gradle.properties files)
 
--   Contents in that file are
+-   Contents in that file are<br>
 
-storePassword= Password while creating keystore
-keyPassword= Password while creating keystore
-keyAlias=key
-storeFile=D:/KeyStore/key.jks(Path Where key.js is stored)
+storePassword= Password while creating keystore<br>
+keyPassword= Password while creating keystore<br>
+keyAlias=key<br>
+storeFile=D:/KeyStore/key.jks(Path Where key.js is stored)<br>
 
 
 
@@ -38,10 +38,10 @@ storeFile=D:/KeyStore/key.jks(Path Where key.js is stored)
   
 -  Open file build.gradle from andriod/app/guild.gradle.
 
--  Above  defaultConfig {	
-… 
-…
-}
+-  Above  defaultConfig {	<br>
+… <br>
+…<br>
+}<br>
                     Paste :
 
   
@@ -54,7 +54,7 @@ storeFile=D:/KeyStore/key.jks(Path Where key.js is stored)
 
 
 
- 			-  In the same file in thbuildTypes  block  change signingConfigs to  signingConfigs.release or simply paste the code :
+ 			In the same file in the buildTypes  block  change signingConfigs to  <br>signingConfigs.release or simply paste the code :
 
 
 
@@ -86,8 +86,8 @@ signingConfigs {
 
 ### Reviewing the app mainfest :
 
--  Goto path /andriod/app/src/main open AndroidMainfest.xml file and if your app is going to use the internet add internet permission for that in mainfest file.
-
+  Goto path /andriod/app/src/main open AndroidMainfest.xml file and <br>if your app is going to use the internet add internet permission for that in mainfest file.
+<br>
     <uses-permission android:name="android.permission.INTERNET" />
 
 
