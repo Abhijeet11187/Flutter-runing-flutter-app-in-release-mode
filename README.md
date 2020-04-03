@@ -9,10 +9,10 @@
 
 <br><br><br>
 
-Signing the app :
+### Signing the app :
 
 
-1.Create Key Store :
+#### 1.Create Key Store :
 
 - To create a key store run command for windows
 keytool -genkey -v -keystore D:\KeyStore\key.jks -keyalg RSA -keysize 2048 -validity 10000 -alias key
@@ -21,7 +21,7 @@ keytool -genkey -v -keystore D:\KeyStore\key.jks -keyalg RSA -keysize 2048 -vali
 
 - Make sure that  you have created the ‘KeyStore’folder in D drive.as per the keytool command or change the path in the command where key.jks is going to be created.
 
-2.Reference Keystore from the App :
+ #### 2.Reference Keystore from the App :
 
 -  Create file key.properties in the andriod folder(this file exists with setting.gradle,gradle.properties files)
 
@@ -34,7 +34,7 @@ storeFile=D:/KeyStore/key.jks(Path Where key.js is stored)
 
 
 
-3. Configure signing in gradle :
+#### 3. Configure signing in gradle :
   
 -  Open file build.gradle from andriod/app/guild.gradle.
 
@@ -45,11 +45,11 @@ storeFile=D:/KeyStore/key.jks(Path Where key.js is stored)
                     Paste :
 
   
- def keystoreProperties = new Properties()
-   def keystorePropertiesFile = rootProject.file('key.properties')
-   if (keystorePropertiesFile.exists()) {
-       keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
-   }
+ def keystoreProperties = new Properties()<br>
+   def keystorePropertiesFile = rootProject.file('key.properties')<br>
+   if (keystorePropertiesFile.exists()) {<br>
+       keystoreProperties.load(new FileInputStream(keystorePropertiesFile))<br>
+   }<br>
 
 
 
@@ -84,7 +84,7 @@ signingConfigs {
 
 
 
-Reviewing the app mainfest :
+### Reviewing the app mainfest :
 
 -  Goto path /andriod/app/src/main open AndroidMainfest.xml file and if your app is going to use the internet add internet permission for that in mainfest file.
 
@@ -95,9 +95,9 @@ Reviewing the app mainfest :
 
 
 
-Building release level app :
+### Building release level app :
 
-         -  Run command : flutter build apk in the cmd of project files.
+         -  Run command : flutter build apk in the cmd of project files.<br>
          -  Goto path : 				 build\app\outputs\apk\release\app-release.apk
             Where you get the release level .apk file.
 
